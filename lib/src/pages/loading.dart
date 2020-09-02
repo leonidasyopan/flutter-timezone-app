@@ -9,9 +9,10 @@ class Loading extends StatefulWidget {
 class _LoadingState extends State<Loading> {
   String time = 'loading...';
 
-  void currentTime() async {
+  void setupSpecificCityTime() async {
     WorldTime instance = WorldTime(
-        flag: '/london.png', location: 'Berlin', url: 'Europe/Berlin');
+        flag: '/london.png', location: 'Berlin', url: 'America/Sao_Paulo');
+    ;
     await instance.getTime();
     setState(() {
       time = instance.time;
@@ -21,16 +22,15 @@ class _LoadingState extends State<Loading> {
   @override
   void initState() {
     super.initState();
-    currentTime();
+    setupSpecificCityTime();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(40.0),
-        child: Text(time),
-      )
-    );
+        body: Padding(
+      padding: EdgeInsets.all(40.0),
+      child: Text(time),
+    ));
   }
 }
