@@ -12,7 +12,6 @@ class _LoadingState extends State<Loading> {
   void setupSpecificCityTime() async {
     WorldTime instance = WorldTime(
         flag: '/london.png', location: 'Berlin', url: 'America/Sao_Paulo');
-    ;
     await instance.getTime();
     setState(() {
       time = instance.time;
