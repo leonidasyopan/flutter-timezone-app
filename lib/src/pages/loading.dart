@@ -13,8 +13,10 @@ class _LoadingState extends State<Loading> {
     WorldTime instance = WorldTime(
         flag: '/london.png', location: 'Berlin', url: 'America/Sao_Paulo');
     await instance.getTime();
-    setState(() {
-      time = instance.time;
+    Navigator.pushReplacementNamed(context, '/home', arguments: {
+      'location': instance.location,
+      'flag': instance.flag,
+      'time': instance.time
     });
   }
 
@@ -29,7 +31,7 @@ class _LoadingState extends State<Loading> {
     return Scaffold(
         body: Padding(
       padding: EdgeInsets.all(40.0),
-      child: Text(time),
+      child: Text('loading...'),
     ));
   }
 }
