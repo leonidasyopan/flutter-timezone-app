@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:time_in_the_world/src/pages/home.dart';
+import 'package:time_in_the_world/src/pages/loading.dart';
+import 'package:time_in_the_world/src/pages/choose_location.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Home(),
+    debugShowCheckedModeBanner: false,
+    // initialRoute: '/home',
+    routes: {
+      '/': (context) => Loading(),
+      '/home': (context) => Home(),
+      '/choose_location': (context) => ChooseLocation(),
+    }
   ));
-}
-
-class Home extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Time in the World'),
-        centerTitle: true,
-      ),
-    );
-  }
 }
