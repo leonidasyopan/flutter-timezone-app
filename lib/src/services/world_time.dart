@@ -7,6 +7,7 @@ class WorldTime {
   String time;
   String flag;
   String url;
+  bool isDaytime;
 
   WorldTime({this.location, this.flag, this.url});
 
@@ -30,8 +31,8 @@ class WorldTime {
         now = now.subtract(new Duration(hours: int.parse(offset)));
       }
 
+      isDaytime = now.hour > 6 && now.hour < 20 ? true : false;
       time = DateFormat.jm().format(now);
-
     } catch (error) {
       print('error caught: $error');
       time = 'An error occurred. Please, try again!';
