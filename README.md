@@ -11,7 +11,7 @@
     Flutter application to check the current time in different cities around the world.
     <br />
     <br />
-    Mais informações sobre o desenvolvedor:
+    More information about the developer:
     <br />
     <a href="https://www.linkedin.com/in/leonidasyopan/" target="_blank">LinkedIn</a>
     ·
@@ -23,19 +23,19 @@
   </p>
 </p>
 
-# Informações sobre o Projeto
+# Project Information
 
-// Esse é um projeto para praticar conceitos básicos de desenvolvimento mobile usando-se o Flutter.
+This project has the intent to apply basic concepts of mobile development using Flutter.
 
 <!-- LICENSE -->
 
-## Licença
+## License
 
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 <!-- CONTACT -->
 
-## Contato
+## Contact
 
 Leônidas Yopán - [@leonidasyopan](https://twitter.com/leonidasyopan) - leonidasyopan@gmail.com
 
